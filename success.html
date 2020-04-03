@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NGQZGBP');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- FB OG Metas -->
+    <meta property="og:url"                content="https://therentbase.com/success" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Thank you for joining RentBase" />
+    <meta property="og:description"        content="We help Real Estate agents qualify and match their rental leads to their listings." />
+    <meta property="og:image"              content="https://therentbase.com/img/rentbase-prequalify-leads-banner.png" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Begin Mailchimp Signup Form -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>Thank you for joining us! | RentBase - match leads to properties</title>
+
+</head>
+<body class="thank-you-page">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGQZGBP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header id="header">
+        <!--<a href="#" data-target="slide-out" class="sidenav-trigger">
+            <img src="img/menu.svg" class="menu" alt="">
+        </a>-->
+        <div class="burger">
+            <div class="x"></div>
+            <div class="y"></div>
+            <div class="z"></div>
+        </div>
+        <div class="links">
+            <a href="index.html#speed_to_lead">Speed to Lead</a>
+            <a href="index.html#quality_leads">Quality Leads</a>
+        </div>
+        <a href="index.html" class="title">
+            <img src="img/logo.svg" alt="">
+            <span>RentBase</span>
+        </a>
+        <div class="links">
+            <a href="index.html#convert_leads">Convert Leads</a>
+            <a href="index.html#contact">Join Us</a>
+        </div>
+    </header>
+
+    <div class="circle"></div>
+    <div class="sidenav-menu">
+        <ul>
+            <li><a href="index.html#speed_to_lead">Speed to Lead</a></li>
+            <li><a href="index.html#quality_leads">Quality Leads</a></li>
+            <li><a href="index.html#convert_leads">Convert Leads</a></li>
+            <li><a href="index.html#contact">Join Us</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="img"></div>
+
+        <h1>Thanks For Signing Up!</h1>
+        <p>
+          You should receive a confirmation email from us shortly. <br>If you haven’t received it, check your Spam folder or <a href="mailto:support@therentbase.com" class="support_link fancy_link">contact&nbsp;us&nbsp;here</a>.<br>
+        </p>
+        <!-- <p class="question" style="margin-top: 25px; margin-bottom: 10px;">Feeling Friendly?</p> -->
+        <a href="#" class="invite_btn share-btn mob">Invite a Friend</a>
+
+    </div>
+
+    <footer>
+        <div class="logo">
+            <img src="img/logo.svg" alt="">
+            <span>RentBase</span>
+        </div>
+        <span>All rights reserved RentBase Inc. 2020</span>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        if( 'ontouchstart' in window ){ var click = 'touchstart'; }
+	else { var click = 'click'; }
+
+
+	$('div.burger').on(click, function(){
+
+			if( !$(this).hasClass('open') ){ openMenu(); }
+			else { closeMenu(); }
+
+	});
+
+
+	$('div.sidenav-menu ul li a').on(click, function(e){
+		//e.preventDefault();
+		closeMenu();
+		window.location.href = this.href;
+    });
+    $('header .title').on(click, function(e){
+        //e.preventDefault();
+        if( $('div.burger').hasClass('open') ) closeMenu();
+		window.location.href = this.href;
+	});
+
+  async function testWebShare(title, text, url) {
+    if (navigator.share === undefined) {
+      alert('Error: Unsupported feature: navigator.share()');
+      return;
+    }
+
+    var file_input = {};
+
+    const files = false && file_input.disabled ? undefined : file_input.files;
+
+    if (files && files.length > 0) {
+      if (!navigator.canShare || !navigator.canShare({files})) {
+        logError('Error: Unsupported feature: navigator.canShare()');
+        return;
+      }
+    }
+
+    try {
+      await navigator.share({title: title, text: text, url: url});
+      console.log('Successfully sent share');
+    } catch (error) {
+      console.error('Error sharing: ' + error);
+    }
+  }
+
+  var shareSite = function() {
+    var shareTitle = this.getAttribute("data-title") || "RentBase - Scale your rental business";
+    var shareDesc = this.getAttribute("data-desc") || "RentBase is helping real eastate agents";
+    var shareURL = this.getAttribute("data-url") || "https://therentbase.com";
+
+    testWebShare(shareTitle, shareDesc, shareURL)
+
+    //alert(shareTitle);
+  };
+
+  shareButtons = document.getElementsByClassName("share-btn");
+
+  for (var i = 0; i < shareButtons.length; i++) {
+    shareButtons[i].addEventListener('click', shareSite, false);
+  }
+
+
+
+	function openMenu(){
+
+        $('div.circle').addClass('expand');
+        $('body').css('overflow', 'hidden');
+        $('.sidenav-menu').css('display', 'block');
+
+		$('div.burger').addClass('open');
+		$('div.x, div.y, div.z').addClass('collapse');
+        $('.sidenav-menu li').addClass('animate');
+        $('.sidenav-menu').addClass('zIndexUp');
+
+		setTimeout(function(){
+			$('div.y').hide();
+			$('div.x').addClass('rotate30');
+			$('div.z').addClass('rotate150');
+		}, 70);
+		setTimeout(function(){
+			$('div.x').addClass('rotate45');
+			$('div.z').addClass('rotate135');
+		}, 120);
+
+
+
+	}
+
+	function closeMenu(){
+
+		$('div.burger').removeClass('open');
+		$('div.x').removeClass('rotate45').addClass('rotate30');
+		$('div.z').removeClass('rotate135').addClass('rotate150');
+		$('div.circle').removeClass('expand');
+        $('.sidenav-menu li').removeClass('animate');
+        $('body').css('overflow', 'inherit');
+
+		setTimeout(function(){
+			$('div.x').removeClass('rotate30');
+			$('div.z').removeClass('rotate150');
+		}, 50);
+		setTimeout(function(){
+			$('div.y').show();
+            $('div.x, div.y, div.z').removeClass('collapse');
+            $('.sidenav-menu').removeClass('zIndexUp');
+            $('.sidenav-menu').css('display', 'none');
+		}, 70);
+
+	}
+    </script>
+</body>
+</html>
