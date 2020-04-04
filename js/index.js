@@ -19,13 +19,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 scrolledHeader.css('display', 'flex').addClass('sticky');
             } else {
                 header.css('display', 'flex');
-                scrolledHeader.css('display', 'none');
+                scrolledHeader.css('display', 'none').removeClass('sticky');;
             }
+        } else {
+            header.css('display', 'flex');
+            scrolledHeader.css('display', 'none').removeClass('sticky');
         }
     }
 
     
     headerOnScroll();
+
+    window.addEventListener('resize', function() {
+        headerOnScroll();
+    })
 
     window.addEventListener('scroll', function() {
         headerOnScroll();
