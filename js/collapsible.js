@@ -5,4 +5,6 @@ $(".collapsible__header").on('click', function(e) {
     } else {
         header.addClass('active');
     }
+    let content = header.next()[0];                
+    content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
 });
