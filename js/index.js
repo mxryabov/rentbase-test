@@ -30,13 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     headerOnScroll();
 
-    window.addEventListener('resize', function() {
-        headerOnScroll();
-    })
+    window.addEventListener('resize', headerOnScroll)
 
-    window.addEventListener('scroll', function() {
-        headerOnScroll();
-    });
+    window.addEventListener('scroll', headerOnScroll);
     
 
     /*
