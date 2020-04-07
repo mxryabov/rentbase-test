@@ -787,7 +787,7 @@ footer {
 
     .description {
         padding: 100px 30px 170px;
-        background: url(../img/about-us-description.png) 50% 100% no-repeat;
+        background: url(../img/about-us-description.png) 35% 100% no-repeat;
         background-size: initial;
 
         h1 { 
@@ -806,7 +806,7 @@ footer {
         }
         .btn {
             width: 100%;
-            max-width: 465px;
+            max-width: 360px;
             height: 70px;
             font-size: 20px;
             margin-left: auto;
@@ -1161,7 +1161,8 @@ footer {
     .about-us-page, .faq-page {
         .description {
             background-image: url(../img/desktop/about-us-description.png);
-            background-size: 900px auto;
+            background-size: 1200px auto;
+            background-position: 55% 100%;
 
             h1, p {
                 text-align: center;
