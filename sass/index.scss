@@ -1323,10 +1323,10 @@ footer {
     }
 
     .send_req_block {
-        margin-top: 80px;
-        background: url(../img/desktop/main-block.png) 50% 50% no-repeat;
+        margin-top: 0px;
+        background: url(../img/desktop/main-block.png) 50% 100% no-repeat;
         background-size: cover;
-        padding: 150px 0;
+        padding: 230px 0;
         .title, .sub_title { max-width: 80%; }
         form>div { width: 70%; margin: 0 auto; max-width: 900px; }
     }
@@ -1555,7 +1555,7 @@ footer {
 
 
     .send_req_block {
-        height: 721px;
+        height: 920px;
 
         .title { font-size: 100px; line-height: 100px; }
         .sub_title { font-size: 37px; }
@@ -1575,6 +1575,7 @@ footer {
     .send_req_block_bottom {
         padding-top: 45px;
         padding-bottom: 55px;
+        overflow: hidden;
 
         h1 {
             max-width: 500px;
