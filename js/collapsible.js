@@ -6,5 +6,5 @@ $(".collapsible__header").on('click', function(e) {
         header.addClass('active');
     }
     let content = header.next()[0];                
-    content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+    content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 30 + 'px';
 });

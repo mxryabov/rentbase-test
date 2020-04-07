@@ -50,6 +50,9 @@
             }
         }
     }
+    &__header.active ~ &__body {
+        //margin-bottom: 30px;
+    }
     &__body {
         font-size: 18px;
         font-family: "AssistantRegular";
@@ -57,6 +60,11 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height .3s ease-in-out;
+
+        span {
+            display: block;
+            margin-bottom: 20px;
+        }
 
         .bold {font-weight: bold;}
         a {
@@ -767,6 +775,11 @@ footer {
         font-family: "AssistantBold";
         background-color: #5833E8;
         border: 1px solid #707070;
+        transition: background-color .3s;
+            
+        &:hover {
+            background-color: #331A9A;
+        }
     }
     p {
         font-family: "AssistantRegular";
@@ -1005,7 +1018,7 @@ footer {
         width: 80%;
         background-color: #5833E8;
         margin: 4px auto;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
     }
 
     .cards {
@@ -1186,7 +1199,7 @@ footer {
                 }
                 p {
                     font-size: 22px;
-                    line-height: 24px;
+                    line-height: 30px;
                     margin-bottom: 20px;
 
                     a {
@@ -1207,8 +1220,9 @@ footer {
                     border-right: 1px solid #707070;
                     
                     .btn {
-                        margin-top: auto;
-                        margin-bottom: 20px;
+                        margin: auto auto 20px;
+                        width: 360px;
+                        height: 74px;
                     }
                 }
             }
@@ -1324,6 +1338,7 @@ footer {
 
     .send_req_block {
         margin-top: 0px;
+        margin-bottom: 80px;
         background: url(../img/desktop/main-block.png) 50% 100% no-repeat;
         background-size: cover;
         padding: 230px 0;
@@ -1334,7 +1349,7 @@ footer {
     .divider {
         max-width: 400px;
         width: 80%;
-        margin: 40px auto 80px auto;
+        margin: 30px auto 80px auto;
     }
 
     .cards {
@@ -1402,7 +1417,8 @@ footer {
 
     .about-us-page, .faq-page {
         .description {
-            background-size: 100% auto;
+            background-size: 130% auto;
+            background-position-x: 60%;
             padding-bottom: 20%;
         }
 
@@ -1540,6 +1556,9 @@ footer {
     .cards .card .descr .text,
     .send_req_block_bottom p {font-size: 18px; line-height: 26px;}
 
+    .about-us-page, .faq-page {
+        .description .btn {width: 360px; height: 74px;}
+    }
 }
 
 
@@ -1590,7 +1609,9 @@ footer {
 
     .about-us-page, .faq-page {
         .description {
-            margin-bottom: 50px;
+            margin-bottom: 0px;
+            background-size: 130% auto;
+            background-position: 65% 70%;
             h1 {
                 font-size: 100px !important;
                 line-height: 119px;
@@ -1614,6 +1635,7 @@ footer {
         }
 
         .owners {
+            h1 {margin-bottom: 120px;}
             &__list_item {
                 img.tab { display: none; }
                 img.desk { display: block !important; }
@@ -1628,8 +1650,9 @@ footer {
         }
 
         .questions {
+            padding-top: 120px;
             h1 {font-size: 120px !important; line-height: 120px;}
-            p {font-size: 35px;}
+            p {font-size: 35px; margin-bottom: 50px;}
         }
     }
 }
