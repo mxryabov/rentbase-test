@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     var header = $("header");
-    var firstFold = $(".send_req_block")[0];
+    var firstFold = $(".send_req_block")[0] || {scrollHeight: 200};
     var sticky = $(".sticky_input");
     var footer_position = $("footer").position().top;
 
 
     function headerOnScroll() {
-        if (firstFold) {
+        
+        if (firstFold) {            
             if (window.screen.width < 1280) {
                 if (
                     pageYOffset > firstFold.scrollHeight && 
