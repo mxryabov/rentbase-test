@@ -1,29 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
     var header = $("header");
-    var scrolledHeader = $("#scrolled_header");
+    var firstFold = $(".send_req_block")[0];
 
 
     function headerOnScroll() {
-        
-        if (window.screen.width > 1350) {
-            if (pageYOffset > 700 ) {
-                header.css('display', 'none');
-                scrolledHeader.css('display', 'flex');
+        if (firstFold) {
+            if (pageYOffset > firstFold.scrollHeight) {
+                const animationType = window.screen.width < 1280 ? "bounceInDown" : "bounceInRight";
+                header.addClass("show-input");
+                header.children("form")[0].classList.add("animated", animationType)
             } else {
-                header.css('display', 'flex');
-                scrolledHeader.css('display', 'none');
+                header.removeClass("show-input");
             }
-        } else if (window.screen.width < 768) {
-            if (pageYOffset > 500 ) {     
-                header.css('display', 'none');
-                scrolledHeader.css('display', 'flex').addClass('sticky');
-            } else {
-                header.css('display', 'flex');
-                scrolledHeader.css('display', 'none').removeClass('sticky');;
-            }
-        } else {
-            header.css('display', 'flex');
-            scrolledHeader.css('display', 'none').removeClass('sticky');
         }
     }
 
