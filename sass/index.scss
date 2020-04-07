@@ -481,7 +481,7 @@ form > div {
 
 
 header {
-    background-color: rgba(255,255,255, .97);
+    background-color: rgba(255,255,255, .8);
     position: fixed;
     height: 62px;
     top: 0;
@@ -558,22 +558,22 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 62px;
+    //margin-top: 62px;
     flex-direction: column;
     position: relative;
     width: 100%;
     background: url(../img/main-block.png) 50% 100% no-repeat;
     padding: 0 20px;
-    padding-top: 45px;
+    padding-top: 107px;
     margin-bottom: 0;
     padding-bottom: 35px;
 
     .filter {
         position: absolute;
-        top: 0;
+        top: 62px;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: calc(100% - 62px);
         background: #000000 0% 0% no-repeat padding-box;
         opacity: 0.63;
         z-index: 0;
@@ -996,9 +996,9 @@ footer {
     
 
     .send_req_block {
-        padding: 80px 0 150px;
+        padding: 142px 0 150px;
         margin-bottom: 50px;
-        margin-top: 62px;
+        background-size: cover;
 
         .title {
             font-size: 60px;
@@ -1247,7 +1247,7 @@ footer {
 
 @media only screen and (min-width: 768px) {
 
-    h1 { font-size: 34px; }
+    h1 { font-size: 25px; }
 
     body.thank-you-page {
         overflow: visible;
@@ -1300,8 +1300,8 @@ footer {
     }
 
     header {
-        height: 80px;
-        div.burger { top: 30px; left: 30px; }
+        height: 70px;
+        div.burger { top: 25px; left: 30px; }
 
         .links {
             a {
@@ -1312,67 +1312,63 @@ footer {
 
         .title {
             img {
-                width: 65px;
-                height: 35px;
+                width: 55px;
+                height: 30px;
             }
             span {
-                font-size: 38px;
+                font-size: 32px;
             }
         }
     }
 
     form>div {
         flex-direction: row;
-        height: 65px;
+        height: 50px;
         width: 100%;
         max-width: inherit;
 
         input[type=text]:not(.browser-default),
         input[type=email]:not(.browser-default) {
-            font-size: 20px;
+            font-size: 15px;
             height: 100%;
             flex-grow: 1;
             width: initial;
 
             &::placeholder {
-                font-size: 20px;
+                font-size: 15px;
             }
     }
 
         input[type=submit], button {
             min-width: 190px;
             height: 100%;
-            font-size: 20px;
+            font-size: 15px;
         }
     }
 
     .send_req_block {
         margin-top: 0px;
-        margin-bottom: 80px;
+        margin-bottom: 60px;
         background: url(../img/desktop/main-block.png) 50% 100% no-repeat;
         background-size: cover;
-        padding: 230px 0;
+        padding: 200px 0 180px;
+
         .title, .sub_title { max-width: 80%; }
-        form>div { width: 70%; margin: 0 auto; max-width: 900px; }
+        form>div { width: 70%; margin: 0 auto; max-width: 640px; }
+        .filter {top: 70px; height: calc(100% - 70px);}
     }
 
     .divider {
         max-width: 400px;
         width: 80%;
-        margin: 30px auto 80px auto;
+        margin: 20px auto 60px auto;
     }
 
     .cards {
         .card {
             .descr {
-                .title {
-                    font-size: 38px;
-                    line-height: 45px;
-                }
-                .text {
-                    line-height: 42px;
-                    font-size: 30px;
-                }
+                .title {font-size: 22px;}
+                .text {font-size: 18px;}
             }
             img {
                 max-height: 230px;
@@ -1381,16 +1377,17 @@ footer {
     }
 
     .send_req_block_bottom {
-        h1 {
+        /*h1 {
             font-size: 37px;
             margin-bottom: 20px;
         }
         p {
             font-size: 25px;
             max-width: 900px;
-        }
+        }*/
         form {
             max-width: 675px;
+            &>div {height: 60px;}
         }
     }
 
@@ -1537,7 +1534,6 @@ footer {
         }
 
         &.show-input {
-            height: 80px;
 
             .title {display: block;}
 
@@ -1558,15 +1554,23 @@ footer {
                         font-size: 14px;
                     }
                     .mc-field-group {
-                        min-width: 215px;
+                        min-width: 255px;
                     }
                 }
             }
         }
     }
 
+    .cards {
+        .card {
+            .descr {
+                .title {font-size: 30px;}
+            }
+        }
+    }
+
     .cards .card .descr .text,
-    .send_req_block_bottom p {font-size: 18px; line-height: 26px;}
+    .send_req_block_bottom p {font-size: 22px; line-height: 26px;}
 
     .about-us-page, .faq-page {
         .description .btn {width: 360px; height: 74px;}
@@ -1575,7 +1579,7 @@ footer {
 
 
 @media only screen and (min-width: 1440px) {
-    h1 {font-size: 50px !important;}
+    h1 {font-size: 30px;}
 
     header {
         padding: 0 50px;
@@ -1586,10 +1590,14 @@ footer {
 
 
     .send_req_block {
-        height: 920px;
+        height: 840px;
 
         .title { font-size: 100px; line-height: 100px; }
         .sub_title { font-size: 37px; }
+
+        form>div {
+            height: 60px;
+        }
     }
 
     .cards {
@@ -1611,10 +1619,12 @@ footer {
             max-width: 500px;
             font-family: "AssistantRegular";
             font-weight: normal;
-            line-height: 54px;
+            line-height: 38px;
+            font-size: 32px;
         }
         p {
             font-family: "AssistantRegular";
+            font-size: 18px;
         }
     }
 
@@ -1646,7 +1656,7 @@ footer {
         }
 
         .owners {
-            h1 {margin-bottom: 120px;}
+            h1 {margin-bottom: 120px; font-size: 50px;}
             &__list_item {
                 img.tab { display: none; }
                 img.desk { display: block !important; }
