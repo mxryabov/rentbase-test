@@ -1,16 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
     var header = $("header");
     var firstFold = $(".send_req_block")[0];
+    var sticky = $(".sticky_input");
+    var footer_position = $("footer").position().top;
 
 
     function headerOnScroll() {
         if (firstFold) {
-            if (pageYOffset > firstFold.scrollHeight) {
-                const animationType = window.screen.width < 1280 ? "bounceInDown" : "bounceInRight";
-                header.addClass("show-input");
-                header.children("form")[0].classList.add("animated", animationType)
+            if (window.screen.width < 1280) {
+                if (
+                    pageYOffset > firstFold.scrollHeight && 
+                    window.screen.height + pageYOffset < footer_position
+                ) {
+                    sticky.addClass("active");
+                } else {
+                    sticky.removeClass("active");
+                }
             } else {
-                header.removeClass("show-input");
+                if (pageYOffset > firstFold.scrollHeight) {
+                    header.addClass("show-input");
+                    header.children("form")[0].classList.add("animated", "bounceInRight")
+                } else {
+                    header.removeClass("show-input");
+                }
             }
         }
     }
