@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function headerOnScroll() {
         
         if (firstFold) {            
-            if (window.screen.width < 1280) {
+            if (window.screen.width < 1024) {
                 if (
                     pageYOffset > firstFold.scrollHeight && 
                     window.screen.height + pageYOffset < footer_position
