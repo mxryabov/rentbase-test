@@ -505,9 +505,11 @@ header {
     }
 
     .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
         img {
-            width: 54px;
-            height: 26px;
+            width: 52px;
         }
         span {
             font-size: 30px;
@@ -696,7 +698,7 @@ footer {
         // display: flex;
         flex-direction: row;
         img {
-            width: 53px;
+            width: 150px;
         }
         span {
             font-family: 'PlayFairBold';
@@ -986,9 +988,6 @@ footer {
         }
     }
 
-
-    
-
     .send_req_block {
         padding: 142px 0 150px;
         margin-bottom: 50px;
@@ -1101,8 +1100,7 @@ footer {
             margin-bottom: 10px;
 
             img {
-                width: 65px;
-                margin-right: 10px;
+                width: 200px;
             }
             span {
                 font-size: 32px;
@@ -1306,8 +1304,7 @@ footer {
 
         .title {
             img {
-                width: 55px;
-                height: 30px;
+                width: 60px;
             }
             span {
                 font-size: 32px;
@@ -1487,8 +1484,7 @@ footer {
         .title {
             margin-top: -8px;
             img {
-                width: 61px;
-                height: 30px;
+                width: 52px;
             }
             span {
                 font-size: 29px;
@@ -1500,7 +1496,7 @@ footer {
 
         &.show-input {
 
-            .title {display: block;}
+            .title {display: flex;}
 
             form {
                 margin-left: auto;
@@ -1650,6 +1646,10 @@ footer {
             font-family: "AssistantRegular";
             font-size: 18px;
         }
+    }
+
+    footer {
+        .logo img {width: 250px;}
     }
 
     .about-us-page, .faq-page {
